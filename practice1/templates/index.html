@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Template is Working</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">NILAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>   
+                <form class="d-flex ml-2">
+                    <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success ml-2" type="submit">Akhi site jovani jarur nathi direct aaya search mari ne kaam patav ne</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Hello Bro!!!</strong> You should take rest.
+        <button type="button" class="btn btn-light" data-bs-dismiss="alert" aria-label="Close">No need</button>
+    </div>
+    <div class="container">
+        <form action="/getdata/" method="post"> {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Type Something</label>
+                <textarea class="form-control" name="name" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>   
+            <div class="custom-check custom-switch">
+                <input type="checkbox" name="upper" class="custom-control-input" id="customswitch1">
+                <label class="custom-control-label" for="customswitch1">UpperCase</label>
+            </div>
+            <div class="custom-check custom-switch">
+                <input type="checkbox" name="active" class="custom-control-input" id="customswitch2">
+                <label class="custom-control-label" for="customswitch2">Active or not</label>
+            </div>
+            <button type="submit" class="btn btn-dark mt-2">Submit</button>
+        </form> 
+    </container>    
+    {% comment %} Ho Gaya Hamara
+    {{ name }} is from {{ place }} {% endcomment %}
+    <h1>Welcome to Django</h1>
+    {% comment %} GET is used to fetch data from server side while POST is used to get data from user. {% endcomment %}
+    {% comment %} <form action="/getdata" method="get">
+        Enter Text: <input type="text" name="name"><br><br>
+        <input type="checkbox" name="active">Active OR Not Active<br><br>
+        <input type="checkbox" name="upper">UpperCase<br><br>
+        <button type="submit">Submit</button>
+    </form> {% endcomment %}
+
+</body>
+</html>
